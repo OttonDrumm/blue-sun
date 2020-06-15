@@ -33,7 +33,7 @@ Urla il frigo con tono minaccioso.
 [[esci dalla cucina -&gt; Frigo 4]]</tw-passagedata><tw-passagedata pid="7" name=" Frigo 4" tags="" position="843,409.5" size="100,100">Stai uscendo dalla cucina e ti rendi conto di essere arrivato fin qui ma di non aver fatto nulla.
 [[cerca di ricordare cosa volessi fare -&gt; Ricorda]]
 [[analizza i tuoi bisogni corporei -&gt; Analizza]]
-(if: $analisi and $ricorda) [[[torna indietro a prendere uno spuntino -&gt; Frigo 1]] (set: $amnesia to $amnesia+1)]</tw-passagedata><tw-passagedata pid="8" name=" Ricorda" tags="" position="766,560.5" size="100,100">Ti fermi un attimo, non ricordi cosa dovessi fare o cosa avessi fatto in quella stanza.
+(if: $amnesia &gt;0 or ($analisi and $ricorda)) [[[torna indietro a prendere uno spuntino -&gt; Frigo 1]] (set: $amnesia to $amnesia+1)]</tw-passagedata><tw-passagedata pid="8" name=" Ricorda" tags="" position="766,560.5" size="100,100">Ti fermi un attimo, non ricordi cosa dovessi fare o cosa avessi fatto in quella stanza.
 (set: $ricorda to true)
 [[indietro -&gt; Frigo 4]] </tw-passagedata><tw-passagedata pid="9" name=" Analizza" tags="" position="918,559.5" size="100,100">Ti tocchi lo stomaco, hai fame. Uno spuntino potrebbe fare al caso tuo.
 (set: $analisi to true)
