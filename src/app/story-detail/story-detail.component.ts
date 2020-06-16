@@ -5,7 +5,8 @@ import { stories } from '../resources/ts/stories';
 
 @Component({
     selector: 'blue-sun',
-    templateUrl: './story-detail.component.html'
+    templateUrl: './story-detail.component.html',
+    styleUrls: ['../stories/stories.component.css']
 })
 export class StoryDetailsComponent implements OnInit {
     story;
