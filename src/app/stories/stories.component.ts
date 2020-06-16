@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 import { stories } from '../resources/ts/stories';
 
 @Component({
-  selector: 'app-product-list',
+  selector: 'blue-sun',
   templateUrl: './stories.component.html',
   styleUrls: ['./stories.component.css']
 })

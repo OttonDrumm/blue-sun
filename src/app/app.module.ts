@@ -5,17 +5,20 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { StoriesComponent } from './stories/stories.component';
+import { StoryDetailsComponent } from './story-detail/story-detail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    StoriesComponent
+    StoriesComponent,
+    StoryDetailsComponent
   ],
   imports: [
     BrowserModule,
     ReactiveFormsModule,
     RouterModule.forRoot([
       { path: '', component: StoriesComponent },
+      { path: 'stories/:storyId', component: StoryDetailsComponent },
     ])
   ],
   providers: [],

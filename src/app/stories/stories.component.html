@@ -1,11 +1,15 @@
 <h2>Storie</h2>
 
-<div *ngFor="let story of stories">
+<div *ngFor="let story of stories | keyvalue">
 
     <h3>
-      <a [title]="story.title + ' details'">
-        {{ story.path }}
+      <a [title]="story.value.title + ' details'" [routerLink]="['/stories', story.key]">
+        {{ story.value.title }}
       </a>
     </h3>
+
+    <p *ngIf="story.value.description">
+        Description: {{ story.value.description }}
+    </p>
   
   </div>
